@@ -37,6 +37,9 @@ if __name__ == "__main__":
     print(f"Two Sum Example:")
     print(f"Input: nums = {nums}, target = {target}")
     print(f"Output: {result}")
-    print(
-        f"Explanation: nums[{result[0]}] + nums[{result[1]}] = {nums[result[0]]} + {nums[result[1]]} = {target}"
-    )
+    if len(result) >= 2:
+        print(
+            f"Explanation: nums[{result[0]}] + nums[{result[1]}] = {nums[result[0]]} + {nums[result[1]]} = {target}"
+        )
+    else:
+        print("No solution found.")

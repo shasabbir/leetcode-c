@@ -24,8 +24,10 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
         }
     }
     
+    // No solution found
+    free(result);
     *returnSize = 0;
-    return result;
+    return NULL;
 }
 
 int main() {
@@ -41,8 +43,10 @@ int main() {
         printf("Output: [%d, %d]\n", result[0], result[1]);
         printf("Explanation: nums[%d] + nums[%d] = %d + %d = %d\n",
                result[0], result[1], nums[result[0]], nums[result[1]], target);
+        free(result);
+    } else {
+        printf("No solution found.\n");
     }
     
-    free(result);
     return 0;
 }
